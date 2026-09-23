@@ -193,12 +193,11 @@ GitHub は、プログラムをインターネット上に保存・公開でき�
 
 「クローン」は、GitHub 上のリポジトリを **自分のパソコンにダウンロードする** ことです。
 
-### ① 空のフォルダを作って VS Code で開く
+### ① 作業用のフォルダを作って VS Code で開く
 
-1. VS Code のメニューから **File → Open Folder...**（日本語表示なら **ファイル → フォルダーを開く...**）を選ぶ
-2. 開いた画面で「ドキュメント」フォルダ（または「デスクトップ」）に移動し、「**新しいフォルダー**」ボタンで `workshop-game` という名前のフォルダを作る
-3. 作った `workshop-game` フォルダを選んで開く
-4. 「このフォルダ内のファイルの作成者を信頼しますか？」と聞かれたら、「**Yes, I trust the authors**」（日本語表示なら「**はい、作成者を信頼します**」）を押す
+1. 好きな場所に、`ryobi-art-club` という名前の新しいフォルダを作る（例：デスクトップ）
+2. VS Code のメニューから **File → Open Folder...**（日本語表示なら **ファイル → フォルダーを開く...**）を選び、作った `ryobi-art-club` フォルダを開く
+3. 「このフォルダ内のファイルの作成者を信頼しますか？」と聞かれたら、「**Yes, I trust the authors**」（日本語表示なら「**はい、作成者を信頼します**」）を押す
 
 ### ② クローンする
 
@@ -206,12 +205,17 @@ GitHub は、プログラムをインターネット上に保存・公開でき�
 2. ターミナルを開き、次を入力する（URL の部分は、コピーしたものを貼り付け）
 
 ```
-git clone https://github.com/あなたのユーザー名/workshop-game.git .
+git clone https://github.com/あなたのユーザー名/workshop-game.git
 ```
 
-> ⚠️ **最後の `.`（スペースとピリオド）を忘れずに！** 「今開いているフォルダにダウンロードする」という意味です。
+左側のファイル一覧に `workshop-game` フォルダができます。
+
+### ③ workshop-game フォルダを開き直す
+
+もう一度 **File → Open Folder...** を選び、`ryobi-art-club` の中にできた **`workshop-game`** フォルダを開きます。
 
 左側のファイル一覧に `sample.py` や `README.md` が表示されれば成功です。
+このあとの作業は、すべてこの `workshop-game` フォルダを開いた状態で行います。
 
 ---
 
@@ -241,7 +245,7 @@ python sample.py
 | --- | --- |
 | `python` が見つからないと言われる（Windows） | エディタを開き直す。それでもダメなら、Python のインストーラーを再度起動し「Add python.exe to PATH」にチェックを入れて入れ直す |
 | `python` が見つからないと言われる（Mac / Linux） | `python3` と入力する |
-| `can't open file ... sample.py` と出る | VS Code で `workshop-game` フォルダを開けていないか、クローンのときに最後の `.` を忘れています。左側のファイル一覧に `sample.py` が見えるか確認する |
+| `can't open file ... sample.py` と出る | `ryobi-art-club` フォルダを開いたままになっています。手順 7 の ③ で `workshop-game` フォルダを開き直す |
 | `No module named 'tkinter'` と出る | Mac：python.org のインストーラーで Python を入れ直す。Linux：`sudo apt install python3-tk` |
 | キーを押してもパドルが動かない | ゲームのウィンドウを一度クリックしてから操作する |
 
